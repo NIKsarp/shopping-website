@@ -7,11 +7,9 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(
-    120deg,
-    hsla(339, 100%, 55%, 1) 0%,
-    hsla(197, 100%, 64%, 1) 100%
-  );
+  background: linear-gradient(120deg,
+      hsla(339, 100%, 55%, 1) 0%,
+      hsla(197, 100%, 64%, 1) 100%);
 }
 
 .menubar {
@@ -22,11 +20,9 @@ body {
   position: sticky;
   font-weight: bold;
   border-bottom: 1px solid grey;
-  background: linear-gradient(
-    90deg,
-    hsla(339, 100%, 55%, 1) 0%,
-    hsla(197, 100%, 64%, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      hsla(339, 100%, 55%, 1) 0%,
+      hsla(197, 100%, 64%, 1) 100%);
 }
 
 .menubar ul {
@@ -71,7 +67,7 @@ body {
   left: 100%;
 }
 
-.menubar ul li:hover > ul {
+.menubar ul li:hover>ul {
   display: block;
   visibility: visible;
 }
@@ -83,11 +79,9 @@ body {
   height: 850px;
   position: sticky;
   font-weight: bold;
-  background: linear-gradient(
-    180deg,
-    hsla(339, 100%, 55%, 1) 0%,
-    hsla(197, 100%, 64%, 1) 100%
-  );
+  background: linear-gradient(180deg,
+      hsla(339, 100%, 55%, 1) 0%,
+      hsla(197, 100%, 64%, 1) 100%);
 }
 
 .aside_bar ul {
@@ -103,11 +97,9 @@ body {
 
 .aside_bar ul li:hover {
   transform: translate(5px);
-  background: linear-gradient(
-    360deg,
-    hsla(339, 100%, 55%, 1) 0%,
-    hsla(197, 100%, 64%, 1) 100%
-  );
+  background: linear-gradient(360deg,
+      hsla(339, 100%, 55%, 1) 0%,
+      hsla(197, 100%, 64%, 1) 100%);
 }
 
 .aside_bar ul li a {
@@ -139,40 +131,40 @@ body {
   border-radius: 50px;
 }
 
-.figure .figure-img {
+.figure .card__img {
   width: 300px;
   height: 300px;
 }
 
-.figure-img {
+.card__img {
   width: 300px;
   height: 300px;
   transition: all 0.3s;
 }
 
-.figure-img:hover {
+.card__img:hover {
   transform: translate(20px);
 }
 
-.card h2:hover {
+.card__title:hover {
   transition: all 0.3s;
   transform: translate(30px);
 }
 
-.btnGroup {
+.card__btn-group {
   display: flex;
   gap: 10px;
   justify-content: flex-end;
 }
 
-.btn {
+.card__btn {
   border: none;
   background-color: skyblue;
   padding: 10px 5px;
   border-radius: 5px;
 }
 
-.btn:hover {
+.card__btn:hover {
   background-color: rgb(53, 186, 238);
 }
 
@@ -186,9 +178,7 @@ body {
   font-weight: bold;
   text-align: center;
   border-top: 1px solid grey;
-  background: linear-gradient(
-    90deg,
-    hsla(339, 100%, 55%, 1) 0%,
-    hsla(197, 100%, 64%, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      hsla(339, 100%, 55%, 1) 0%,
+      hsla(197, 100%, 64%, 1) 100%);
 }

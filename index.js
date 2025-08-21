@@ -1,37 +1,65 @@
-const createElement = (tagName, className, textContent) => {
+// --------------------------------------------
+// createElement() Function Start
+
+const createElement = (tagName, textContent) => {
   const element = document.createElement(tagName);
-  element.className = className;
-  textContent && element.appendChild(document.createTextNode(textContent));
+
+  if (textContent) {
+    element.appendChild(document.createTextNode(textContent));
+  }
+
   return element;
 };
+
+// createElement() Function End
 // --------------------------------------------
 // card
+
 const createCard = () => {
-  const card = createElement(`article`, `card`);
-  const figure = createElement(`figure`, `figure`);
-  const figureImg = createElement(`img`, `figure-img`);
-  const cardBody = createElement(`div`, `card__body`);
-  const cardTitle = createElement(`h2`, `card__title`, `Buy this product`);
-  const cardText = createElement(
+  const container = document.getElementById(`cards`);
+
+  // ELEMENTS
+  const article = createElement(`article`);
+  const figure = createElement(`figure`);
+  const img = createElement(`img`);
+  const div = createElement(`div`);
+  const h2 = createElement(`h2`, `Buy this product`);
+  const p = createElement(
     `p`,
-    `card__text`,
     `Lorem ipsum dolor sit amet consectetur adipisicing.`
   );
-  const btnGroup = createElement(`div`, `btnGroup`);
-  const btnBuy = createElement(`button`, "btn", `BUY`);
-  const btnCart = createElement(`button`, "btn", `ADD TO CARD`);
-  // --------------------------------------------
-  card.append(figure, cardBody);
-  figure.appendChild(figureImg);
-  figureImg.src = `shoppping-bag.png`;
-  figureImg.alt = `shopping`;
-  cardBody.append(cardTitle, cardText, btnGroup);
-  btnGroup.append(btnBuy, btnCart);
-  const container = document.getElementById(`container`);
-  container.appendChild(card);
-  
-  return card;
+
+  const div2 = createElement(`div`);
+  const btn = createElement(`button`, `BUY`);
+  const btn2 = createElement(`button`, `ADD TO CART`);
+
+  // ATTRIBUTES
+  img.src = `shoppping-bag.png`;
+  img.alt = `shopping`;
+
+  // CLASSNAME
+  article.className = `card`;
+  figure.className = `figure`;
+  img.className = `card__img`;
+  div.className = `card__body`;
+  h2.className = `card__title`;
+  p.className = `card__text`;
+  div2.className = `card__btn-group`;
+  btn.className = `card__btn`;
+  btn2.className = `card__btn`;
+
+  // APPEND ELEMENTS
+  article.append(figure, div);
+  figure.appendChild(img);
+
+  div.append(h2, p, div2);
+  div2.append(btn, btn2);
+
+  container.appendChild(article);
+
+  return article;
 };
+
 createCard();
 createCard();
 createCard();
